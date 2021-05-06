@@ -32,7 +32,7 @@ def load_repository_packages(
     url = pathlib.Path(remote.url)
     raw_url = pathlib.Path(host) / url.parent.name / url.stem / "raw"
 
-    branches: List[str] = ["any"]
+    branches: List[str] = ["any", "stubs"]
     for platform in ("Linux", "Darwin", "Windows"):
         for version in ("3.6", "3.7", "3.8"):
             branches.append(platform + "_" + version)
